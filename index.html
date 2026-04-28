@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,7 @@
     name="description"
     content="Camilla Karen em Machado, MG. Harmonização facial com planejamento individual, atendimento humanizado e foco em resultados naturais."
   >
+  <meta name="theme-color" content="#f3ede4">
   <title>Camilla Karen | Harmonização Facial em Machado, MG</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,16 +59,11 @@
   <main id="conteudo">
     <section class="hero" id="inicio">
       <div class="hero__backdrop" aria-hidden="true">
-        <div class="image-slot image-slot--hero image-slot--filled">
-          <div class="image-slot__overlay"></div>
-          <div class="image-slot__content">
-            <span class="image-slot__tag">img-1</span>
-            <p>Imagem principal temporária</p>
-          </div>
-        </div>
+        <div class="image-slot image-slot--hero image-slot--filled"></div>
       </div>
       <div class="hero__veil"></div>
       <div class="hero__mark" aria-hidden="true"></div>
+      <div class="hero__grain" aria-hidden="true"></div>
 
       <div class="section-shell hero__grid">
         <div class="hero__copy reveal">
@@ -90,15 +86,33 @@
             <a class="button button--secondary" href="#solucao">Ver tratamentos</a>
           </div>
 
-          <ul class="hero__bullets" aria-label="Destaques do atendimento">
-            <li>13 anos de atuação na odontologia</li>
-            <li>CRO-MG 42340</li>
-            <li>Atendimento multidisciplinar na Clínica Vitale</li>
+          <div class="hero__highlights" aria-label="Destaques do atendimento">
+            <article>
+              <strong>13 anos</strong>
+              <span>de atuação clínica</span>
+            </article>
+            <article>
+              <strong>CRO-MG 42340</strong>
+              <span>responsabilidade técnica</span>
+            </article>
+            <article>
+              <strong>Clínica Vitale</strong>
+              <span>estrutura multidisciplinar</span>
+            </article>
+          </div>
+
+          <ul class="hero__bullets" aria-label="Diferenciais centrais">
+            <li>Indicação com critério clínico e foco em naturalidade</li>
+            <li>Explicação clara antes, durante e depois do tratamento</li>
+            <li>Acompanhamento individual para mais segurança na decisão</li>
           </ul>
         </div>
 
         <aside class="hero__panel reveal reveal-delay" aria-label="Resumo da profissional">
-          <p class="hero__panel-label">Atendimento com planejamento facial</p>
+          <div class="hero__panel-top">
+            <p class="hero__panel-label">Atendimento com planejamento facial</p>
+            <span class="hero__panel-pill">Avaliação individual</span>
+          </div>
           <h2>Harmonização com critério clínico, não com excessos.</h2>
           <p>
             Formação em Odontologia pela Unifenas, especializações em Endodontia, Saúde da Família e
@@ -126,8 +140,12 @@
     <section class="section section--problem" id="problema">
       <div class="section-shell problem-layout">
         <div class="section-intro reveal">
-          <p class="kicker">Problema</p>
+          <p class="kicker">Para quem é</p>
           <h2>Muita gente quer melhorar a face, mas trava por medo de exagero, insegurança ou falta de orientação.</h2>
+          <p>
+            O ponto de partida aqui não é empurrar procedimento. É entender o que incomoda, o que faz sentido
+            tratar e o que deve ser preservado para manter identidade e naturalidade.
+          </p>
         </div>
 
         <div class="problem-points reveal reveal-delay">
@@ -148,13 +166,6 @@
               <p>Sem escuta, transparência e acompanhamento, a experiência vira mais ansiedade do que cuidado.</p>
             </article>
           </div>
-
-          <aside class="image-slot image-slot--section image-slot--warm image-slot--filled reveal" aria-label="Espaço reservado para imagem de consulta">
-            <div class="image-slot__content">
-              <span class="image-slot__tag">img-2</span>
-              <p>Imagem de atendimento ou consulta</p>
-            </div>
-          </aside>
         </div>
       </div>
     </section>
@@ -162,7 +173,7 @@
     <section class="section section--solution" id="solucao">
       <div class="section-shell">
         <div class="section-heading reveal">
-          <p class="kicker">Solução</p>
+          <p class="kicker">Tratamentos</p>
           <h2>Tratamentos indicados com avaliação individual e objetivo claro.</h2>
           <p>
             Cada protocolo parte da análise facial, do seu histórico e da conversa sobre expectativa,
@@ -209,12 +220,7 @@
         </div>
 
         <div class="section-media reveal">
-          <aside class="image-slot image-slot--landscape image-slot--filled" aria-label="Espaço reservado para imagem dos tratamentos">
-            <div class="image-slot__content">
-              <span class="image-slot__tag">img-3</span>
-              <p>Imagem de procedimento, detalhes ou ambiente</p>
-            </div>
-          </aside>
+          <aside class="image-slot image-slot--landscape image-slot--filled" aria-label="Imagem dos tratamentos"></aside>
         </div>
 
         <div class="section-cta reveal">
@@ -261,19 +267,14 @@
           </article>
         </div>
 
-        <aside class="image-slot image-slot--portrait image-slot--filled reveal" aria-label="Espaço reservado para retrato profissional">
-          <div class="image-slot__content">
-            <span class="image-slot__tag">img-4</span>
-            <p>Retrato profissional da Camilla</p>
-          </div>
-        </aside>
+        <aside class="image-slot image-slot--portrait image-slot--filled reveal" aria-label="Retrato profissional da Camilla"></aside>
       </div>
     </section>
 
     <section class="section section--proof" id="prova">
       <div class="section-shell proof-layout">
         <div class="proof-summary reveal">
-          <p class="kicker">Prova</p>
+          <p class="kicker">Credibilidade</p>
           <h2>Autoridade construída com formação, tempo de atuação e estrutura certa para atender bem.</h2>
           <p>
             Para quem busca harmonização facial, confiança não vem só da promessa. Vem da combinação
@@ -310,7 +311,7 @@
     <section class="section section--cta" id="cta">
       <div class="section-shell cta-layout">
         <div class="cta-copy reveal">
-          <p class="kicker">CTA</p>
+          <p class="kicker">Contato</p>
           <h2>Se você quer melhorar sua aparência com naturalidade, o próximo passo é uma avaliação bem conduzida.</h2>
           <p>
             Fale diretamente com a clínica, tire suas dúvidas e entenda qual abordagem faz sentido para você.
@@ -339,12 +340,7 @@
           </ul>
         </div>
 
-        <aside class="image-slot image-slot--contact image-slot--filled reveal" aria-label="Espaço reservado para imagem da clínica">
-          <div class="image-slot__content">
-            <span class="image-slot__tag">img-5</span>
-            <p>Fachada ou interior da clínica</p>
-          </div>
-        </aside>
+        <aside class="image-slot image-slot--contact image-slot--filled reveal" aria-label="Imagem da clínica"></aside>
       </div>
     </section>
   </main>

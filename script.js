@@ -1,4 +1,4 @@
-const header = document.querySelector(".site-header");
+﻿const header = document.querySelector(".site-header");
 const navToggle = document.querySelector(".nav-toggle");
 const navPanel = document.querySelector(".nav-panel");
 const navLinks = document.querySelectorAll(".nav-links a");
@@ -19,22 +19,71 @@ const updateHeaderState = () => {
   header.classList.toggle("is-scrolled", window.scrollY > 18);
 };
 
+const closeMenu = () => {
+  if (!navToggle || !navPanel) {
+    return;
+  }
+
+  navPanel.classList.remove("is-open");
+  navToggle.classList.remove("is-active");
+  navToggle.setAttribute("aria-expanded", "false");
+  navToggle.setAttribute("aria-label", "Abrir menu");
+};
+
+const openMenu = () => {
+  if (!navToggle || !navPanel) {
+    return;
+  }
+
+  navPanel.classList.add("is-open");
+  navToggle.classList.add("is-active");
+  navToggle.setAttribute("aria-expanded", "true");
+  navToggle.setAttribute("aria-label", "Fechar menu");
+};
+
 updateHeaderState();
 window.addEventListener("scroll", updateHeaderState, { passive: true });
 
 if (navToggle && navPanel) {
   navToggle.addEventListener("click", () => {
-    const isOpen = navPanel.classList.toggle("is-open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-    navToggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+    const isOpen = navPanel.classList.contains("is-open");
+
+    if (isOpen) {
+      closeMenu();
+      return;
+    }
+
+    openMenu();
+  });
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+
+    if (!(target instanceof Node)) {
+      return;
+    }
+
+    if (!navPanel.contains(target) && !navToggle.contains(target)) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 760) {
+      closeMenu();
+    }
   });
 }
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    navPanel?.classList.remove("is-open");
-    navToggle?.setAttribute("aria-expanded", "false");
-    navToggle?.setAttribute("aria-label", "Abrir menu");
+    closeMenu();
   });
 });
 
