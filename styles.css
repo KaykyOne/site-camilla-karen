@@ -54,7 +54,7 @@ section[id] { scroll-margin-top: 5rem; }
 
 /* ─── HEADER ─── */
 .site-header {
-  position: sticky; top: 0; z-index: 60;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 60;
   padding: 0.5rem 1rem;
 }
 
@@ -102,12 +102,12 @@ section[id] { scroll-margin-top: 5rem; }
 /* Nav panel (mobile dropdown) */
 .nav-panel {
   position: absolute;
-  top: calc(100% + 0.5rem); left: 0; right: 0; z-index: 1;
+  top: calc(100% + 0.5rem); left: 0; right: 0; z-index: 10;
   display: grid; gap: 1rem; padding: 1.25rem;
   border-radius: var(--radius-lg);
-  background: var(--white);
+  background: #fdfbf8;
   border: 1px solid var(--line);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.12);
   opacity: 0; visibility: hidden;
   transform: translateY(-0.5rem);
   transition: opacity var(--ease), transform var(--ease), visibility var(--ease);
@@ -179,7 +179,7 @@ h1, h2, h3 {
 .hero {
   position: relative;
   min-height: auto;
-  padding: 5.5rem 0 2.5rem;
+  padding: 5rem 0 2.5rem;
   overflow: hidden;
 }
 
@@ -663,7 +663,7 @@ h1, h2, h3 {
     --nav-h: 4.25rem;
   }
 
-  .site-header { padding: 0.75rem 1.5rem; }
+  .site-header { padding: 0.5rem 1.5rem; }
 
   .site-nav { padding: 0.5rem 1.25rem; }
 
