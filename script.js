@@ -11,9 +11,12 @@ if (yearTarget) {
   yearTarget.textContent = new Date().getFullYear();
 }
 
-// Mantém o cabeçalho legível sobre o hero e com contraste após a rolagem.
 const updateHeaderState = () => {
-  header.classList.toggle("is-scrolled", window.scrollY > 16);
+  if (!header) {
+    return;
+  }
+
+  header.classList.toggle("is-scrolled", window.scrollY > 18);
 };
 
 updateHeaderState();
@@ -35,7 +38,6 @@ navLinks.forEach((link) => {
   });
 });
 
-// Atualiza o link ativo conforme a seção mais próxima do topo visível.
 const sectionObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -58,7 +60,6 @@ const sectionObserver = new IntersectionObserver(
 
 sections.forEach((section) => sectionObserver.observe(section));
 
-// Revela os blocos conforme entram na área visível da tela.
 const revealObserver = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
@@ -71,24 +72,21 @@ const revealObserver = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.16
+    threshold: 0.18
   }
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
 
-// Anima números de prova social apenas uma vez, quando o bloco aparece.
 const animateCounter = (element) => {
   const target = Number(element.dataset.counter);
-  const duration = 1200;
   const startTime = performance.now();
+  const duration = 1100;
 
   const step = (currentTime) => {
     const progress = Math.min((currentTime - startTime) / duration, 1);
-    const easedProgress = 1 - Math.pow(1 - progress, 3);
-    const currentValue = Math.round(target * easedProgress);
-
-    element.textContent = currentValue;
+    const eased = 1 - Math.pow(1 - progress, 3);
+    element.textContent = Math.round(target * eased);
 
     if (progress < 1) {
       requestAnimationFrame(step);
