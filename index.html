@@ -1,385 +1,389 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta
-    name="description"
-    content="Camilla Karen — Harmonização facial com planejamento individual, atendimento humanizado e foco em resultados naturais. Machado, MG."
-  >
-  <meta name="theme-color" content="#f5f0ea">
-  <title>Camilla Karen | Harmonização Facial em Machado, MG</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dra. Camilla Karen Harmonização Facial em Machado/MG, com atendimento na Clínica Vitale, foco em bem-estar, cuidado individual e procedimentos estéticos com abordagem multidisciplinar.">
+  <meta name="keywords" content="camilla karen, harmonização facial, botox, preenchimento, bioestimulador de colágeno, radiofrequência microagulhada, machado mg">
+  <title>Camilla Karen Harmonização Facial</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Julius+Sans+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <a id="whatsapp-float" href="https://wa.me/5535988941311?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <img src="images/whatsapp_branco.png" alt="WhatsApp">
+  </a>
 
-  <header class="site-header" id="topo">
-    <nav class="site-nav section-shell" aria-label="Navegação principal">
-      <a class="brand" href="#inicio" aria-label="Voltar para o início">
-        <img src="imgs/logo_sem_fundo.png" alt="Logotipo Camilla Karen">
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-logo" aria-label="Camilla Karen Harmonização Facial">
+        <img src="images/logo_sem_fundo.png" alt="Logo Camilla Karen Harmonização Facial">
       </a>
 
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="nav-menu"
-        aria-label="Abrir menu"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
+      <button id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
       </button>
 
-      <div class="nav-panel" id="nav-menu">
-        <div class="nav-links">
-          <a href="#inicio">Início</a>
-          <a href="#problema">Para quem é</a>
-          <a href="#solucao">Tratamentos</a>
-          <a href="#diferenciais">Diferenciais</a>
-          <a href="#prova">Credibilidade</a>
-          <a href="#cta">Contato</a>
-        </div>
-        <a
-          class="button button--primary"
-          href="https://wa.me/5535988941311?text=Olá%2C%20gostaria%20de%20agendar%20uma%20avaliação."
-          target="_blank"
-          rel="noreferrer"
-        >
-          Agendar avaliação
+      <ul id="nav-menu">
+        <li><a href="#home" class="nav-link active">HOME</a></li>
+        <li><a href="#sobre" class="nav-link">QUEM SOMOS</a></li>
+        <li><a href="#servicos" class="nav-link">SERVIÇOS</a></li>
+        <li><a href="#espaco" class="nav-link">O ESPAÇO</a></li>
+        <li><a href="#depoimentos" class="nav-link">DEPOIMENTOS</a></li>
+        <li><a href="#contato" class="nav-link">CONTATO</a></li>
+        <li>
+          <a href="https://wa.me/5535988941311?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação." class="btn-site nav-cta" target="_blank" rel="noopener">
+            <span>AGENDAR AVALIAÇÃO</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="home" class="hero overlay-dark bg-cover" style="background-image: url('https://images.pexels.com/photos/3985302/pexels-photo-3985302.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600')">
+    <div class="hero-content text-center">
+      <img class="hero-logo" src="images/logo_sem_fundo.png" alt="Camilla Karen Harmonização Facial">
+      <h1>Harmonização facial com cuidado individual e excelência</h1>
+      <p class="hero-support">Atendimento na Clínica Vitale, em um espaço conceituado e bem localizado, pensado para receber cada paciente com atenção, conforto e excelência.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/5535988941311?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação." class="btn-site" target="_blank" rel="noopener">
+          <img class="icon-btn" src="images/whatsapp_branco.png" alt="">
+          <span>Agendar pelo WhatsApp</span>
+        </a>
+        <a href="https://maps.google.com/?q=Rua+Major+Feliciano,+253,+Centro,+Machado,+MG" class="btn-site btn-outline" target="_blank" rel="noopener">
+          <img class="icon-btn" src="images/pin.svg" alt="">
+          <span>Como chegar</span>
         </a>
       </div>
-    </nav>
+    </div>
   </header>
 
-  <main id="conteudo">
-    <section class="hero" id="inicio">
-      <div class="hero__backdrop" aria-hidden="true">
-        <div class="image-slot image-slot--hero image-slot--filled"></div>
+  <main>
+    <section id="sobre">
+      <div class="split-section">
+        <div class="split-img bg-cover" style="background-image: url('https://images.pexels.com/photos/7446674/pexels-photo-7446674.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200')"></div>
+        <div class="split-content bg-gray">
+          <div class="split-box">
+            <div class="section-head section-head-left">
+              <h4>Quem Somos</h4>
+            </div>
+            <p>Sou Camilla Karen, cirurgiã-dentista formada pela Unifenas em 2013, com especialização em Endodontia, Saúde da Família e Radiologia, e atualmente cursando Harmonização Orofacial.</p>
+            <p>Meu atendimento na Clínica Vitale une escuta cuidadosa, foco em bem-estar e uma visão multidisciplinar para indicar procedimentos e condutas de forma personalizada, segura e alinhada ao que cada paciente busca.</p>
+          </div>
+        </div>
       </div>
-      <div class="hero__veil"></div>
+    </section>
 
-      <div class="section-shell hero__grid">
-        <div class="hero__copy reveal">
-          <p class="kicker">Harmonização facial · Machado, MG</p>
-          <h1>Resultado natural começa com diagnóstico certo e técnica precisa.</h1>
-          <p class="hero__lead">
-            Atendimento na Clínica Vitale com abordagem que une estética, saúde e segurança
-            — indicando o tratamento adequado ao seu rosto, ao seu momento e ao efeito que você busca.
-          </p>
+    <section id="servicos" class="section-padding">
+      <div class="container">
+        <div class="section-head">
+          <h4>Serviços</h4>
+        </div>
 
-          <div class="hero__actions">
-            <a
-              class="button button--primary"
-              href="https://wa.me/5535988941311?text=Olá%2C%20gostaria%20de%20agendar%20uma%20avaliação."
-              target="_blank"
-              rel="noreferrer"
-            >
-              Falar no WhatsApp
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-img">
+              <img src="https://images.pexels.com/photos/7446674/pexels-photo-7446674.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Avaliação facial personalizada">
+            </div>
+            <h4>Avaliação Facial Personalizada</h4>
+            <p>Consulta para entender seu perfil, alinhar expectativas e indicar o plano de harmonização facial mais adequado com naturalidade e segurança.</p>
+            <a href="https://wa.me/5535988941311?text=Olá!%20Quero%20agendar%20uma%20avaliação%20facial." class="btn-site" target="_blank" rel="noopener">
+              <img class="icon-btn" src="images/whatsapp_branco.png" alt="">
+              <span>Agende pelo WhatsApp</span>
             </a>
-            <a class="button button--secondary" href="#solucao">Ver tratamentos</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-img">
+              <img src="https://images.pexels.com/photos/4586713/pexels-photo-4586713.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Aplicação de toxina botulínica">
+            </div>
+            <h4>Aplicação de Toxina Botulínica</h4>
+            <p>Procedimento voltado para suavizar linhas de expressão e valorizar a harmonia facial com técnica precisa e resultado elegante.</p>
+            <a href="https://wa.me/5535988941311?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20toxina%20botulínica." class="btn-site" target="_blank" rel="noopener">
+              <img class="icon-btn" src="images/whatsapp_branco.png" alt="">
+              <span>Agende pelo WhatsApp</span>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-img">
+              <img src="https://images.pexels.com/photos/4586740/pexels-photo-4586740.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Preenchedores faciais">
+            </div>
+            <h4>Preenchedores Faciais</h4>
+            <p>Indicação estratégica para restaurar volume, contorno e proporção facial de forma equilibrada e compatível com a anatomia de cada paciente.</p>
+            <a href="https://wa.me/5535988941311?text=Olá!%20Quero%20saber%20mais%20sobre%20preenchedores%20faciais." class="btn-site" target="_blank" rel="noopener">
+              <img class="icon-btn" src="images/whatsapp_branco.png" alt="">
+              <span>Agende pelo WhatsApp</span>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-img">
+              <img src="https://images.pexels.com/photos/3985305/pexels-photo-3985305.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="I-PRF e abordagem regenerativa">
+            </div>
+            <h4>I-PRF e Regeneração Tecidual</h4>
+            <p>Recurso associado à estética facial para favorecer qualidade de pele, revitalização e suporte biológico ao tratamento.</p>
+            <a href="https://wa.me/5535988941311?text=Olá!%20Gostaria%20de%20informações%20sobre%20I-PRF." class="btn-site" target="_blank" rel="noopener">
+              <img class="icon-btn" src="images/whatsapp_branco.png" alt="">
+              <span>Agende pelo WhatsApp</span>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-img">
+              <img src="https://images.pexels.com/photos/3985302/pexels-photo-3985302.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Bioestimulador de colágeno">
+            </div>
+            <h4>Bioestimulador de Colágeno</h4>
+            <p>Tratamento indicado para estimular firmeza e sustentação com foco em rejuvenescimento gradual, textura e qualidade cutânea.</p>
+            <a href="https://wa.me/5535988941311?text=Olá!%20Quero%20saber%20mais%20sobre%20bioestimulador%20de%20colágeno." class="btn-site" target="_blank" rel="noopener">
+              <img class="icon-btn" src="images/whatsapp_branco.png" alt="">
+              <span>Agende pelo WhatsApp</span>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-img">
+              <img src="https://images.pexels.com/photos/3985358/pexels-photo-3985358.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Radiofrequência microagulhada">
+            </div>
+            <h4>Radiofrequência Microagulhada</h4>
+            <p>Procedimento para renovação da pele, melhora de textura e estímulo de colágeno com abordagem moderna e acompanhamento profissional.</p>
+            <a href="https://wa.me/5535988941311?text=Olá!%20Quero%20mais%20informações%20sobre%20radiofrequência%20microagulhada." class="btn-site" target="_blank" rel="noopener">
+              <img class="icon-btn" src="images/whatsapp_branco.png" alt="">
+              <span>Agende pelo WhatsApp</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="numbers-section overlay-dark bg-cover" style="background-image: url('https://images.pexels.com/photos/10521230/pexels-photo-10521230.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600')">
+      <div class="container">
+        <div class="numbers-grid">
+          <div class="number-item">
+            <img src="images/experience.svg" alt="">
+            <h3 class="count-up" data-target="13">0</h3>
+            <p>13 anos de atuação desde 2013</p>
+          </div>
+          <div class="number-item">
+            <img src="images/patients.svg" alt="">
+            <h3 class="count-up" data-target="4">0</h3>
+            <p>4 frentes de formação e especialização</p>
+          </div>
+          <div class="number-item">
+            <img src="images/satisfaction.svg" alt="">
+            <h3 class="count-up" data-target="1">0</h3>
+            <p>atendimento multidisciplinar em um só lugar</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="espaco" class="section-padding">
+      <div class="container-fluid">
+        <div class="section-head">
+          <h4>O Espaço</h4>
+          <p>Conheça referências visuais de um ambiente acolhedor, elegante e preparado para receber você com conforto na Clínica Vitale.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item" data-full="https://images.pexels.com/photos/6899550/pexels-photo-6899550.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600">
+            <img src="https://images.pexels.com/photos/6899550/pexels-photo-6899550.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Recepção institucional">
+            <div class="gallery-overlay"><span>&#128269;</span></div>
+          </div>
+          <div class="gallery-item" data-full="https://images.pexels.com/photos/10521230/pexels-photo-10521230.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600">
+            <img src="https://images.pexels.com/photos/10521230/pexels-photo-10521230.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Consultório estético">
+            <div class="gallery-overlay"><span>&#128269;</span></div>
+          </div>
+          <div class="gallery-item" data-full="https://images.pexels.com/photos/7750119/pexels-photo-7750119.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600">
+            <img src="https://images.pexels.com/photos/7750119/pexels-photo-7750119.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Sala de espera institucional">
+            <div class="gallery-overlay"><span>&#128269;</span></div>
+          </div>
+          <div class="gallery-item" data-full="https://images.pexels.com/photos/7446674/pexels-photo-7446674.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600">
+            <img src="https://images.pexels.com/photos/7446674/pexels-photo-7446674.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Avaliação em atendimento">
+            <div class="gallery-overlay"><span>&#128269;</span></div>
+          </div>
+          <div class="gallery-item" data-full="https://images.pexels.com/photos/7195808/pexels-photo-7195808.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600">
+            <img src="https://images.pexels.com/photos/7195808/pexels-photo-7195808.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Detalhes de ambiente refinado">
+            <div class="gallery-overlay"><span>&#128269;</span></div>
+          </div>
+          <div class="gallery-item" data-full="https://images.pexels.com/photos/6812453/pexels-photo-6812453.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600">
+            <img src="https://images.pexels.com/photos/6812453/pexels-photo-6812453.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Sala clínica moderna">
+            <div class="gallery-overlay"><span>&#128269;</span></div>
+          </div>
+          <div class="gallery-item" data-full="https://images.pexels.com/photos/4586732/pexels-photo-4586732.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600">
+            <img src="https://images.pexels.com/photos/4586732/pexels-photo-4586732.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Acolhimento em consulta">
+            <div class="gallery-overlay"><span>&#128269;</span></div>
+          </div>
+          <div class="gallery-item" data-full="https://images.pexels.com/photos/3985305/pexels-photo-3985305.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600">
+            <img src="https://images.pexels.com/photos/3985305/pexels-photo-3985305.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Cuidados e suporte profissional">
+            <div class="gallery-overlay"><span>&#128269;</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="testimonials-section overlay-dark bg-cover section-padding" style="background-image: url('https://images.pexels.com/photos/6899550/pexels-photo-6899550.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600')">
+      <div class="container">
+        <div class="testimonials-wrapper">
+          <div class="testimonials-track" id="testimonials-track">
+            <article class="testimonial-item">
+              <div class="testimonial-avatar">
+                <img src="https://images.pexels.com/photos/3985318/pexels-photo-3985318.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Paciente Juliana">
+              </div>
+              <div class="testimonial-info">
+                <h6>Juliana M. <span>Paciente</span></h6>
+                <div class="stars">★★★★★</div>
+              </div>
+              <p>"Me senti ouvida desde a avaliação. A Dra. Camilla explicou cada etapa com calma e indicou um tratamento que respeitou meu rosto e meu objetivo."</p>
+            </article>
+
+            <article class="testimonial-item">
+              <div class="testimonial-avatar">
+                <img src="https://images.pexels.com/photos/4586732/pexels-photo-4586732.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Paciente Fernanda">
+              </div>
+              <div class="testimonial-info">
+                <h6>Fernanda R. <span>Paciente</span></h6>
+                <div class="stars">★★★★★</div>
+              </div>
+              <p>"O atendimento na Clínica Vitale transmite confiança. Tudo foi muito organizado, acolhedor e com uma proposta de resultado natural, do jeito que eu queria."</p>
+            </article>
+
+            <article class="testimonial-item">
+              <div class="testimonial-avatar">
+                <img src="https://images.pexels.com/photos/3985302/pexels-photo-3985302.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Paciente Patrícia">
+              </div>
+              <div class="testimonial-info">
+                <h6>Patrícia S. <span>Paciente</span></h6>
+                <div class="stars">★★★★★</div>
+              </div>
+              <p>"Gostei muito da forma como o plano foi personalizado. Dá para perceber o cuidado com a qualidade dos produtos e com o bem-estar em cada detalhe."</p>
+            </article>
           </div>
 
-          <div class="hero__highlights" aria-label="Destaques do atendimento">
-            <article>
-              <strong>13 anos</strong>
-              <span>de atuação clínica</span>
-            </article>
-            <article>
-              <strong>CRO-MG 42340</strong>
-              <span>responsabilidade técnica</span>
-            </article>
-            <article>
-              <strong>Clínica Vitale</strong>
-              <span>estrutura multidisciplinar</span>
-            </article>
-          </div>
-
-          <ul class="hero__bullets" aria-label="Diferenciais centrais">
-            <li>Indicação com critério clínico e foco em naturalidade</li>
-            <li>Explicação clara antes, durante e depois do tratamento</li>
-            <li>Acompanhamento individual para mais segurança</li>
-          </ul>
-        </div>
-
-        <aside class="hero__panel reveal reveal-delay" aria-label="Resumo da profissional">
-          <div class="hero__panel-top">
-            <p class="hero__panel-label">Planejamento facial</p>
-            <span class="hero__panel-pill">Avaliação individual</span>
-          </div>
-          <h2>Harmonização com critério clínico, não com excessos.</h2>
-          <p>
-            Formação em Odontologia pela Unifenas, especializações em Endodontia, Saúde da Família e
-            Radiologia, além de formação contínua em Harmonização Orofacial.
-          </p>
-
-          <dl class="hero__facts">
-            <div>
-              <dt>Local</dt>
-              <dd>Clínica Vitale, Machado</dd>
-            </div>
-            <div>
-              <dt>Contato direto</dt>
-              <dd>(35) 98894-1311</dd>
-            </div>
-            <div>
-              <dt>Foco</dt>
-              <dd>Naturalidade e acompanhamento</dd>
-            </div>
-          </dl>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section section--problem" id="problema">
-      <div class="section-shell problem-layout">
-        <div class="section-intro reveal">
-          <p class="kicker">Para quem é</p>
-          <h2>Muita gente quer melhorar a face, mas trava por medo de exagero ou falta de orientação.</h2>
-          <p>
-            O ponto de partida aqui não é empurrar procedimento. É entender o que incomoda, o que faz sentido
-            tratar e o que deve ser preservado para manter identidade e naturalidade.
-          </p>
-        </div>
-
-        <div class="problem-points reveal reveal-delay">
-          <div class="problem-points__grid">
-            <article>
-              <span>01</span>
-              <h3>Receio de perder naturalidade</h3>
-              <p>Quando o tratamento é mal indicado, o resultado pode não respeitar o seu rosto.</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>Dúvidas sobre o que precisa</h3>
-              <p>Nem sempre o procedimento mais conhecido é o que faz sentido para o seu caso.</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>Falta de confiança no atendimento</h3>
-              <p>Sem escuta, transparência e acompanhamento, a experiência vira mais ansiedade do que cuidado.</p>
-            </article>
+          <div class="testimonial-controls">
+            <button class="t-prev" aria-label="Depoimento anterior">&#8592;</button>
+            <div class="t-dots" id="t-dots"></div>
+            <button class="t-next" aria-label="Próximo depoimento">&#8594;</button>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--solution" id="solucao">
-      <div class="section-shell">
-        <div class="section-heading reveal">
-          <p class="kicker">Tratamentos</p>
-          <h2>Indicados com avaliação individual e objetivo claro.</h2>
-          <p>
-            Cada protocolo parte da análise facial, do histórico e da conversa sobre expectativa,
-            rotina e resultado desejado. O foco é tratar com coerência.
-          </p>
+    <section class="section-padding bg-gray">
+      <div class="container">
+        <div class="section-head">
+          <h4>Diferenciais</h4>
         </div>
 
-        <div class="solution-grid">
-          <article class="solution-item reveal">
-            <strong>01</strong>
-            <div>
-              <h3>Toxina botulínica</h3>
-              <p>Suaviza linhas de expressão e ajuda a manter uma aparência mais descansada.</p>
+        <div class="diff-grid">
+          <div class="diff-item">
+            <div class="diff-icon">
+              <img src="images/humanizado.svg" alt="">
             </div>
-          </article>
-          <article class="solution-item reveal reveal-delay">
-            <strong>02</strong>
-            <div>
-              <h3>Preenchedores</h3>
-              <p>Reposicionam volume e refinam contornos faciais com equilíbrio e proporção.</p>
+            <h6>Atendimento humanizado, com escuta cuidadosa e foco no bem-estar de cada paciente.</h6>
+          </div>
+          <div class="diff-item diff-border">
+            <div class="diff-icon">
+              <img src="images/diagnostico.svg" alt="">
             </div>
-          </article>
-          <article class="solution-item reveal">
-            <strong>03</strong>
-            <div>
-              <h3>I-PRF</h3>
-              <p>Protocolo regenerativo para favorecer qualidade tecidual e rejuvenescimento.</p>
+            <h6>Planejamento personalizado para indicar procedimentos com naturalidade, equilíbrio e segurança.</h6>
+          </div>
+          <div class="diff-item">
+            <div class="diff-icon">
+              <img src="images/tecnologia.svg" alt="">
             </div>
-          </article>
-          <article class="solution-item reveal reveal-delay">
-            <strong>04</strong>
-            <div>
-              <h3>Bioestimulador de colágeno</h3>
-              <p>Estimula firmeza e sustentação para um resultado progressivo e natural.</p>
+            <h6>Qualidade de atendimento aliada ao uso de bons produtos e abordagem técnica atualizada.</h6>
+          </div>
+          <div class="diff-item">
+            <div class="diff-icon">
+              <img src="images/agenda.svg" alt="">
             </div>
-          </article>
-          <article class="solution-item reveal">
-            <strong>05</strong>
-            <div>
-              <h3>Radiofrequência microagulhada</h3>
-              <p>Combina tecnologia e estímulo dérmico para melhorar textura, firmeza e qualidade da pele.</p>
+            <h6>Agendamento rápido pelo WhatsApp, com atendimento em clínica conceituada e bem localizada.</h6>
+          </div>
+          <div class="diff-item diff-border">
+            <div class="diff-icon">
+              <img src="images/conforto.svg" alt="">
             </div>
-          </article>
-        </div>
-
-        <div class="section-media reveal">
-          <aside class="image-slot image-slot--landscape image-slot--filled" aria-label="Imagem dos tratamentos"></aside>
-        </div>
-
-        <div class="section-cta reveal">
-          <p>Quer entender qual tratamento combina com o seu objetivo?</p>
-          <a
-            class="button button--primary"
-            href="https://wa.me/5535988941311?text=Olá%2C%20quero%20entender%20qual%20tratamento%20é%20mais%20indicado%20para%20mim."
-            target="_blank"
-            rel="noreferrer"
-          >
-            Solicitar avaliação
-          </a>
+            <h6>Atendimento na Clínica Vitale, em ambiente acolhedor, elegante e preparado para receber você.</h6>
+          </div>
+          <div class="diff-item">
+            <div class="diff-icon">
+              <img src="images/suporte.svg" alt="">
+            </div>
+            <h6>Tratamento multidisciplinar em um só lugar, com suporte de dentista, nutrólogo, otorrino e psicólogo.</h6>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--differentials" id="diferenciais">
-      <div class="section-shell differentials-layout">
-        <div class="differentials-copy reveal">
-          <p class="kicker">Diferenciais</p>
-          <h2>Uma jornada mais segura, clara e acolhedora.</h2>
-          <p>
-            A experiência foi estruturada para reduzir dúvidas, alinhar expectativas e dar mais segurança
-            em cada etapa do processo.
-          </p>
+    <section id="contato">
+      <div class="split-section">
+        <div class="contact-panel overlay-dark bg-cover" style="background-image: url('https://images.pexels.com/photos/10521230/pexels-photo-10521230.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200')">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon"><img src="images/phone.svg" alt=""></div>
+              <div>
+                <h6>Telefone:</h6>
+                <p><a href="tel:+553532951311">(35) 3295-1311</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><img src="images/whatsapp_branco.png" alt=""></div>
+              <div>
+                <h6>WhatsApp:</h6>
+                <p><a href="https://wa.me/5535988941311" target="_blank" rel="noopener">(35) 98894-1311</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><img src="images/pin.svg" alt=""></div>
+              <div>
+                <h6>Endereço:</h6>
+                <p>Rua Major Feliciano, 253<br>Centro, Machado/MG</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><img src="images/mail.svg" alt=""></div>
+              <div>
+                <h6>E-mail:</h6>
+                <p><a href="mailto:camillascneves@hotmail.com">camillascneves@hotmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><img src="images/instagram.svg" alt=""></div>
+              <div>
+                <h6>CRO-MG:</h6>
+                <p>42340</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="differentials-list">
-          <article class="differential reveal">
-            <h3>Atendimento humanizado</h3>
-            <p>Escuta atenta, explicação clara e condução individual em cada decisão.</p>
-          </article>
-          <article class="differential reveal reveal-delay">
-            <h3>Planejamento com base clínica</h3>
-            <p>Formação sólida em odontologia para indicar com mais critério e responsabilidade.</p>
-          </article>
-          <article class="differential reveal">
-            <h3>Produtos selecionados</h3>
-            <p>Escolha cuidadosa dos recursos para preservar performance e segurança clínica.</p>
-          </article>
-          <article class="differential reveal reveal-delay">
-            <h3>Estrutura multidisciplinar</h3>
-            <p>Dentista, nutrólogo, otorrino e psicólogo em um mesmo ecossistema de cuidado.</p>
-          </article>
-        </div>
-
-        <aside class="image-slot image-slot--portrait image-slot--filled reveal" aria-label="Retrato profissional da Camilla"></aside>
-      </div>
-    </section>
-
-    <section class="section section--proof" id="prova">
-      <div class="section-shell proof-layout">
-        <div class="proof-summary reveal">
-          <p class="kicker">Credibilidade</p>
-          <h2>Autoridade construída com formação, tempo e estrutura.</h2>
-          <p>
-            Confiança não vem só da promessa. Vem da combinação entre experiência, atualização
-            e ambiente clínico confiável.
-          </p>
-        </div>
-
-        <div class="proof-metrics">
-          <article class="proof-metric reveal">
-            <strong data-counter="13">13</strong>
-            <span>anos de mercado</span>
-          </article>
-          <article class="proof-metric reveal reveal-delay">
-            <strong data-counter="4">4</strong>
-            <span>frentes de formação e especialização</span>
-          </article>
-          <article class="proof-metric reveal">
-            <strong data-counter="1">1</strong>
-            <span>clínica com atendimento multidisciplinar</span>
-          </article>
-        </div>
-
-        <div class="proof-note reveal">
-          <h3>Como funciona o atendimento</h3>
-          <ol>
-            <li>Conversa inicial para entender objetivo, contexto e histórico.</li>
-            <li>Avaliação para definir o plano mais coerente para o seu rosto.</li>
-            <li>Orientação e acompanhamento para que você passe pelo processo com tranquilidade.</li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--cta" id="cta">
-      <div class="section-shell cta-layout">
-        <div class="cta-copy reveal">
-          <p class="kicker">Contato</p>
-          <h2>O próximo passo é uma avaliação bem conduzida.</h2>
-          <p>
-            Fale diretamente com a clínica, tire suas dúvidas e entenda qual abordagem faz sentido para você.
-          </p>
-        </div>
-
-        <div class="cta-card reveal">
-          <a
-            class="button button--primary button--block"
-            href="https://wa.me/5535988941311?text=Olá%2C%20gostaria%20de%20agendar%20uma%20avaliação."
-            target="_blank"
-            rel="noreferrer"
-          >
-            Agendar pelo WhatsApp
-          </a>
-          <ul class="contact-data">
-            <li><span>Telefone</span><a href="tel:+553532951311">(35) 3295-1311</a></li>
-            <li><span>WhatsApp</span><a href="https://wa.me/5535988941311" target="_blank" rel="noreferrer">(35) 98894-1311</a></li>
-            <li><span>E-mail</span><a href="mailto:camillascneves@hotmail.com">camillascneves@hotmail.com</a></li>
-            <li>
-              <span>Endereço</span>
-              <a href="https://www.google.com/maps/search/?api=1&query=Rua+Major+Feliciano,+253,+Centro,+Machado,+MG" target="_blank" rel="noreferrer">
-                Rua Major Feliciano, 253, Centro, Machado - MG
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <aside class="image-slot image-slot--contact image-slot--filled reveal" aria-label="Imagem da clínica"></aside>
+        <div class="contact-side-img bg-cover" style="background-image: url('https://images.pexels.com/photos/4586732/pexels-photo-4586732.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200')"></div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="section-shell footer-layout">
-      <div class="footer-brand-block">
-        <a class="footer-brand" href="#inicio" aria-label="Voltar para o início">
-          <img src="imgs/logo_sem_fundo.png" alt="Logotipo Camilla Karen">
-        </a>
-        <p class="footer-text">
-          Harmonização facial com planejamento individual, naturalidade e atendimento cuidadoso em Machado, MG.
-        </p>
-      </div>
-
-      <nav class="footer-nav" aria-label="Navegação do rodapé">
-        <a href="#inicio">Início</a>
-        <a href="#problema">Para quem é</a>
-        <a href="#solucao">Tratamentos</a>
-        <a href="#diferenciais">Diferenciais</a>
-        <a href="#prova">Credibilidade</a>
-        <a href="#cta">Contato</a>
-      </nav>
-
-      <div class="footer-bottom">
-        <p>&copy; <span id="current-year"></span> Camilla Karen. Todos os direitos reservados.</p>
-        <a href="https://wa.me/5535988941311" target="_blank" rel="noreferrer">(35) 98894-1311</a>
-      </div>
+  <footer>
+    <div class="container footer-inner">
+      <a href="#home" aria-label="Voltar ao topo">
+        <img class="footer-logo" src="images/logo_sem_fundo.png" alt="Logo Camilla Karen Harmonização Facial">
+      </a>
+      <p>&copy; 2026 Camilla Karen Harmonização Facial - Todos os direitos reservados</p>
+      <p>Atendimento na Clínica Vitale | Machado - MG</p>
     </div>
   </footer>
 
-  <a
-    class="floating-whatsapp"
-    href="https://wa.me/5535988941311?text=Olá%2C%20gostaria%20de%20agendar%20uma%20avaliação."
-    target="_blank"
-    rel="noreferrer"
-    aria-label="Falar no WhatsApp"
-  >
-    <img src="imgs/icon-whatsapp.png" alt="">
-  </a>
+  <div id="lightbox" class="lightbox-modal" aria-hidden="true">
+    <span class="lightbox-close" aria-label="Fechar imagem">&times;</span>
+    <img id="lightbox-img" src="" alt="Imagem ampliada da clínica">
+  </div>
 
-  <script src="script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
