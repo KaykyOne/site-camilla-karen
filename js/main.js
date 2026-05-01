@@ -2,22 +2,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbar");
   const toggle = document.getElementById("nav-toggle");
   const menu = document.getElementById("nav-menu");
+  const navLogo = document.querySelector(".nav-logo img");
   const hero = document.querySelector(".hero");
   const navLinks = [...document.querySelectorAll('.nav-link, a[href^="#"]:not(.btn-site)')];
   const sections = [...document.querySelectorAll("main section[id], header[id]")];
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const lightboxClose = document.querySelector(".lightbox-close");
+  const lightboxPrev = document.querySelector(".lightbox-prev");
+  const lightboxNext = document.querySelector(".lightbox-next");
+  const galleryItems = [...document.querySelectorAll(".gallery-item")];
   const track = document.getElementById("testimonials-track");
   const testimonialItems = track ? [...track.querySelectorAll(".testimonial-item")] : [];
   const dotsEl = document.getElementById("t-dots");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let currentGalleryIndex = -1;
   let currentSlide = 0;
   let autoPlay;
 
   function setNavbarState() {
     const isScrolled = window.scrollY > 50;
     navbar.classList.toggle("scrolled", isScrolled);
+
+    if (navLogo) {
+      const logoSrc = isScrolled || navbar.classList.contains("menu-open")
+        ? navLogo.dataset.logoScrolled
+        : navLogo.dataset.logoDefault;
+
+      if (logoSrc && navLogo.getAttribute("src") !== logoSrc) {
+        navLogo.setAttribute("src", logoSrc);
+      }
+    }
 
     if (hero && !reduceMotion && window.innerWidth > 991) {
       const offset = Math.min(window.scrollY * 0.35, 220);
@@ -103,21 +118,53 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".count-up").forEach((element) => countObserver.observe(element));
 
-  document.querySelectorAll(".gallery-item").forEach((item) => {
-    item.addEventListener("click", () => {
-      lightboxImg.src = item.dataset.full || item.querySelector("img").src;
-      lightbox.classList.add("open");
-      lightbox.setAttribute("aria-hidden", "false");
-    });
+  function openLightbox(index) {
+    if (!galleryItems.length) {
+      return;
+    }
+
+    currentGalleryIndex = (index + galleryItems.length) % galleryItems.length;
+    const item = galleryItems[currentGalleryIndex];
+    const image = item.querySelector("img");
+    lightboxImg.src = item.dataset.full || (image ? image.src : "");
+    lightboxImg.alt = image ? image.alt : "Imagem ampliada da clínica";
+    lightbox.classList.add("open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  }
+
+  function showGalleryStep(step) {
+    if (!galleryItems.length || currentGalleryIndex < 0) {
+      return;
+    }
+
+    openLightbox(currentGalleryIndex + step);
+  }
+
+  galleryItems.forEach((item, index) => {
+    item.addEventListener("click", () => openLightbox(index));
   });
 
   function closeLightbox() {
     lightbox.classList.remove("open");
     lightbox.setAttribute("aria-hidden", "true");
     lightboxImg.src = "";
+    lightboxImg.alt = "Imagem ampliada da clínica";
+    currentGalleryIndex = -1;
+    document.body.classList.remove("modal-open");
   }
 
   lightboxClose.addEventListener("click", closeLightbox);
+
+  lightboxPrev.addEventListener("click", (event) => {
+    event.stopPropagation();
+    showGalleryStep(-1);
+  });
+
+  lightboxNext.addEventListener("click", (event) => {
+    event.stopPropagation();
+    showGalleryStep(1);
+  });
 
   lightbox.addEventListener("click", (event) => {
     if (event.target === lightbox) {
@@ -128,6 +175,10 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && lightbox.classList.contains("open")) {
       closeLightbox();
+    } else if (event.key === "ArrowLeft" && lightbox.classList.contains("open")) {
+      showGalleryStep(-1);
+    } else if (event.key === "ArrowRight" && lightbox.classList.contains("open")) {
+      showGalleryStep(1);
     }
   });
 

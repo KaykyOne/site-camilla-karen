@@ -39,6 +39,10 @@ body {
   background: linear-gradient(180deg, #fdfbf8 0%, #f3efe9 100%);
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -97,6 +101,12 @@ footer p {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.icon-img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
 
 .container-fluid {
@@ -238,7 +248,8 @@ footer p {
 }
 
 .btn-outline {
-  background: rgba(255, 253, 250, 0.55);
+  background: rgba(255, 253, 250, 0.76);
+  backdrop-filter: blur(3px);
   border: 1px solid var(--border);
   box-shadow: none;
   color: var(--primary-deep);
@@ -268,16 +279,12 @@ footer p {
   top: 0;
   left: 0;
   width: 100%;
-
-  padding: 0 20px;
+  padding: 5px;
   min-height: 80px;
   display: flex;
   align-items: center;
-  background: rgba(24, 18, 12, 0.28);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: background-color 0.45s ease, box-shadow 0.45s ease, border-color 0.45s ease, backdrop-filter 0.45s ease;
   z-index: 100;
-  backdrop-filter: blur(8px);
 }
 
 #navbar.scrolled,
@@ -293,6 +300,10 @@ footer p {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .nav-logo {
@@ -300,7 +311,7 @@ footer p {
 }
 
 .nav-logo img {
-  width: 40px;
+  width: 150px;
   border-radius: 18px;
 }
 
@@ -311,7 +322,7 @@ footer p {
 }
 
 .nav-link {
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 400;
   color: #fff;
   letter-spacing: 1.6px;
@@ -372,7 +383,7 @@ footer p {
 }
 
 .hero::before {
-  background: rgba(223, 218, 213, 0.519);
+  background: rgba(46, 45, 44, 0.703);
 }
 
 .hero-content {
@@ -382,23 +393,23 @@ footer p {
 }
 
 .hero-logo {
-  width: 100px;
-  margin: 0 auto 30px;
+  width: 250px;
+  margin: 0 auto 20px;
 }
 
 .hero h1 {
-  font-size: clamp(30px, 5vw, 60px);
+  font-size: clamp(20px, 5vw, 50px);
   line-height: 1.2;
-  color: var(--text);
+  color: white;
   letter-spacing: 1px;
   margin-bottom: 22px;
 }
 
 .hero-support {
   max-width: 720px;
-  margin: 0 auto 30px;
-  color: rgba(79, 67, 56, 0.9);
-  font-size: 24px;
+  margin: 0 auto 20px;
+  color: rgba(255, 255, 255, 0.755);
+  font-size: 20px;
 }
 
 .hero-btns {
@@ -525,7 +536,7 @@ footer p {
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  gap: 10px;
 }
 
 .gallery-item {
@@ -556,6 +567,13 @@ footer p {
   color: #fff;
 }
 
+.gallery-overlay .icon-img {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
 .gallery-item:hover img {
   transform: scale(1.08);
 }
@@ -583,6 +601,37 @@ footer p {
   max-width: 90vw;
   max-height: 90vh;
   object-fit: contain;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 100%;
+  background: transparent;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.3s, border-color 0.3s;
+  z-index: 1;
+}
+
+.lightbox-nav:hover,
+.lightbox-nav:focus-visible {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.lightbox-prev {
+  left: 24px;
+}
+
+.lightbox-next {
+  right: 24px;
 }
 
 .lightbox-close {
@@ -815,7 +864,7 @@ footer p {
 }
 
 footer {
-  background: rgba(255, 253, 250, 0.92);
+  background: rgba(0, 0, 0, 0.919);
   padding: 60px 20px;
   text-align: center;
   border-top: 1px solid rgba(126, 85, 38, 0.12);
@@ -941,7 +990,7 @@ footer a:hover {
   }
 
   .hero-support {
-    font-size: 21px;
+    font-size: 16px;
   }
 
   .hero-btns {
@@ -978,5 +1027,19 @@ footer a:hover {
 
   .footer-logo {
     width: 120px;
+  }
+
+  .lightbox-nav {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+
+  .lightbox-prev {
+    left: 14px;
+  }
+
+  .lightbox-next {
+    right: 14px;
   }
 }
