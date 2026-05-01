@@ -118,6 +118,11 @@ footer p {
   padding: 120px 0;
 }
 
+#espaco{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .section-head {
   margin-bottom: 80px;
   text-align: center;
@@ -445,6 +450,8 @@ footer p {
 }
 
 .services-grid {
+  justify-content: center;
+  align-items: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
@@ -453,6 +460,8 @@ footer p {
 .service-card {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
   gap: 16px;
   padding: 20px;
   border-radius: 24px;
@@ -541,6 +550,7 @@ footer p {
 
 .gallery-item {
   position: relative;
+  border-radius: 8px;
   overflow: hidden;
   aspect-ratio: 1;
   cursor: pointer;
@@ -557,7 +567,7 @@ footer p {
 .gallery-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(126, 85, 38, 0.82), rgba(247, 241, 165, 0.58));
+  background: linear-gradient(135deg, rgba(126, 85, 38, 0.925), rgba(247, 242, 165, 0.711));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -565,6 +575,20 @@ footer p {
   transition: opacity 0.4s;
   font-size: 36px;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(2px);
+  gap:20px;
+}
+
+.gallery-overlay a{
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: black;
 }
 
 .gallery-overlay .icon-img {
@@ -903,6 +927,11 @@ footer a:hover {
     display: flex;
   }
 
+  #espaco{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
   #nav-menu {
     display: none;
     flex-direction: column;
@@ -958,7 +987,7 @@ footer a:hover {
   }
 
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .contact-side-img {
@@ -1018,6 +1047,18 @@ footer a:hover {
     font-size: 17px;
   }
 
+    .services-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .service-card {
+    max-width: 90%;
+    width: 100%;
+  }
+
   .hero-btns {
     flex-direction: column;
     align-items: center;
@@ -1027,6 +1068,7 @@ footer a:hover {
     width: min(100%, 320px);
     justify-content: center;
   }
+  
 
   .services-grid,
   .numbers-grid,
