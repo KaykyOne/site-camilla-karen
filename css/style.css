@@ -852,6 +852,7 @@ h4,
   padding: 80px 5%;
   display: flex;
   align-items: center;
+  min-width: 0;
 }
 
 .contact-panel::before {
@@ -861,19 +862,26 @@ h4,
 .contact-info {
   position: relative;
   z-index: 2;
+  width: min(100%, 560px);
+  display: grid;
+  gap: 35px;
 }
 
 .contact-item {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  align-items: start;
   gap: 20px;
-  margin-bottom: 35px;
 }
 
 .contact-icon {
   width: 36px;
   flex-shrink: 0;
   margin-top: 2px;
+}
+
+.contact-copy {
+  min-width: 0;
 }
 
 .contact-icon img {
@@ -890,8 +898,23 @@ h4,
 .contact-item p,
 .contact-item a {
   color: #fff;
-  font-size: 20px;
+  font-size: clamp(17px, 2vw, 20px);
   font-weight: 500;
+  line-height: 1.6;
+}
+
+.contact-item p {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.contact-item a {
+  display: inline;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .contact-item a:hover {
@@ -1031,6 +1054,14 @@ footer a:hover {
   .contact-side-img {
     min-height: 320px;
   }
+
+  .contact-panel {
+    padding: 72px 8%;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1126,6 +1157,31 @@ footer a:hover {
     padding: 64px 20px;
   }
 
+  .contact-info {
+    gap: 26px;
+  }
+
+  .contact-item {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .contact-icon {
+    width: 30px;
+  }
+
+  .contact-item h6 {
+    font-size: 11px;
+    letter-spacing: 1.4px;
+    margin-bottom: 6px;
+  }
+
+  .contact-item p,
+  .contact-item a {
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
   .nav-logo img {
     width: 88px;
   }
@@ -1150,5 +1206,29 @@ footer a:hover {
 
   .lightbox-modal {
     padding: 20px;
+  }
+}
+
+@media (max-width: 479px) {
+  .contact-panel {
+    padding: 52px 16px;
+  }
+
+  .contact-info {
+    gap: 22px;
+  }
+
+  .contact-item {
+    grid-template-columns: 26px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .contact-icon {
+    width: 26px;
+  }
+
+  .contact-item p,
+  .contact-item a {
+    font-size: 16px;
   }
 }
