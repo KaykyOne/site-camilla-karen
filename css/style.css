@@ -43,6 +43,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 main section[id],
@@ -57,6 +59,10 @@ body {
   color: var(--text);
   line-height: 1.5;
   overflow-x: hidden;
+  overscroll-behavior-x: none;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
   background: linear-gradient(180deg, #fdfbf8 0%, #f3efe9 100%);
 }
 
