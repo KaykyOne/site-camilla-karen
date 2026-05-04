@@ -20,19 +20,23 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentSlide = 0;
   let autoPlay;
 
+  function syncNavbarLogo() {
+    if (!navLogo) {
+      return;
+    }
+
+    const shouldUseScrolledLogo = window.scrollY > 50 || navbar.classList.contains("menu-open");
+    const logoSrc = shouldUseScrolledLogo ? navLogo.dataset.logoScrolled : navLogo.dataset.logoDefault;
+
+    if (logoSrc && navLogo.getAttribute("src") !== logoSrc) {
+      navLogo.setAttribute("src", logoSrc);
+    }
+  }
+
   function setNavbarState() {
     const isScrolled = window.scrollY > 50;
     navbar.classList.toggle("scrolled", isScrolled);
-
-    if (navLogo) {
-      const logoSrc = isScrolled || navbar.classList.contains("menu-open")
-        ? navLogo.dataset.logoScrolled
-        : navLogo.dataset.logoDefault;
-
-      if (logoSrc && navLogo.getAttribute("src") !== logoSrc) {
-        navLogo.setAttribute("src", logoSrc);
-      }
-    }
+    syncNavbarLogo();
 
     if (hero && !reduceMotion && window.innerWidth > 991) {
       const offset = Math.min(window.scrollY * 0.35, 220);
@@ -59,12 +63,14 @@ document.addEventListener("DOMContentLoaded", () => {
     menu.classList.remove("open");
     navbar.classList.remove("menu-open");
     toggle.setAttribute("aria-expanded", "false");
+    setNavbarState();
   }
 
   toggle.addEventListener("click", () => {
     const isOpen = menu.classList.toggle("open");
     navbar.classList.toggle("menu-open", isOpen);
     toggle.setAttribute("aria-expanded", String(isOpen));
+    setNavbarState();
   });
 
   navLinks.forEach((link) => {

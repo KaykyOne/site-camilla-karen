@@ -51,11 +51,11 @@ header[id] {
 }
 
 body {
-  font-family: "Cinzel", serif;
-  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
   font-weight: 500;
   color: var(--text);
-  line-height: 1.4;
+  line-height: 1.5;
   overflow-x: hidden;
   background: linear-gradient(180deg, #fdfbf8 0%, #f3efe9 100%);
 }
@@ -86,9 +86,8 @@ span {
 }
 
 p {
-  font-size: 21px;
   font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 h1 {
@@ -120,7 +119,7 @@ h6,
 .btn-site,
 .number-item p,
 footer p {
-  font-family: "Cinzel", serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1,
@@ -343,7 +342,7 @@ h4,
   justify-content: space-between;
   gap: 20px;
   width: 100%;
-  max-width: 1050px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -534,7 +533,6 @@ h4,
 }
 
 .service-card p {
-  font-size: 19px;
   font-weight: 500;
   color: var(--text);
   line-height: 1.6;
@@ -623,7 +621,7 @@ h4,
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 1.6px;
-  font-family: "Cinzel", serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   color: black;
