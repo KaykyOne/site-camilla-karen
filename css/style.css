@@ -9,6 +9,13 @@
   --white: #fffdfa;
   --border: rgba(126, 85, 38, 0.18);
   --shadow: 0 22px 60px rgba(95, 61, 23, 0.12);
+  --type-line-body: 1.2;
+  --type-line-heading: 1.0;
+  --type-line-display: 1.2;
+  --type-track-body: 0.01em;
+  --type-track-heading: 0.05em;
+  --type-track-label: 0.12em;
+  --type-track-section: 0.09em;
 }
 
 * {
@@ -36,7 +43,7 @@ body {
   font-size: 14px;
   font-weight: 500;
   color: var(--text);
-  line-height: 1.5;
+  line-height: var(--type-line-body);
   overflow-x: hidden;
   overscroll-behavior-x: none;
   width: 100%;
@@ -72,36 +79,42 @@ span {
 
 p {
   font-weight: 500;
-  line-height: 1.3;
+  line-height: var(--type-line-body);
+  letter-spacing: var(--type-track-body);
 }
 
 h1 {
   font-size: 40px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  line-height: var(--type-line-heading);
 }
 
 h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  line-height: var(--type-line-heading);
 }
 
 h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  line-height: var(--type-line-heading);
 }
 
 h4 {
   font-size: 35px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
+  line-height: var(--type-line-heading);
 }
 
 h6 {
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  letter-spacing: 1.8px;
+  line-height: 1.45;
+  letter-spacing: var(--type-track-label);
 }
 
 h6,
@@ -118,7 +131,7 @@ h3,
 h4,
 .section-head h4,
 .service-card h4 {
-  letter-spacing: 0.05em;
+  letter-spacing: var(--type-track-heading);
 }
 
 .section-head h4,
@@ -172,7 +185,7 @@ h4,
   font-size: 35px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: var(--type-track-section);
   position: relative;
   display: inline-block;
 }
@@ -191,6 +204,7 @@ h4,
   max-width: 620px;
   margin: 18px auto 0;
   color: var(--text);
+  line-height: var(--type-line-body);
 }
 
 .bg-gray {
@@ -229,7 +243,8 @@ h4,
   border-radius: 25px;
   font-size: 13px;
   font-weight: 400;
-  letter-spacing: 1.6px;
+  line-height: 1.45;
+  letter-spacing: var(--type-track-label);
   text-transform: uppercase;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -373,7 +388,7 @@ h4,
   font-size: 10px;
   font-weight: 400;
   color: var(--nav-link-color);
-  letter-spacing: 1.6px;
+  letter-spacing: var(--type-track-label);
   padding: 8px 12px;
   transition: color 0.3s;
 }
@@ -435,7 +450,7 @@ h4,
 
 .hero h1 {
   font-size: clamp(20px, 5vw, 50px);
-  line-height: 1.2;
+  line-height: var(--type-line-display);
   color: white;
   letter-spacing: 1px;
   margin-bottom: 22px;
@@ -523,14 +538,14 @@ h4,
   font-size: 19px;
   font-weight: 700;
   color: var(--primary-deep);
-  line-height: 1.4;
-  letter-spacing: 1px;
+  line-height: var(--type-line-heading);
+  letter-spacing: var(--type-track-heading);
 }
 
 .service-card p {
   font-weight: 500;
   color: var(--text);
-  line-height: 1.6;
+  line-height: var(--type-line-body);
   flex: 1;
 }
 
@@ -568,7 +583,8 @@ h4,
   font-size: 12px;
   font-weight: 400;
   color: #fff;
-  letter-spacing: 1.6px;
+  line-height: 1.45;
+  letter-spacing: var(--type-track-label);
   text-transform: none;
   margin-top: 8px;
 }
@@ -616,7 +632,8 @@ h4,
 .gallery-overlay a{
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: 1.6px;
+  line-height: 1.45;
+  letter-spacing: var(--type-track-label);
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: black;
@@ -763,7 +780,8 @@ h4,
 
 .testimonial-item p {
   font-size: 23px;
-  line-height: 1.8;
+  line-height: var(--type-line-body);
+  letter-spacing: var(--type-track-body);
   margin-top: 20px;
   font-weight: 500;
 }
@@ -838,7 +856,8 @@ h4,
   font-size: 15px;
   font-weight: 600;
   color: #444;
-  line-height: 1.6;
+  line-height: var(--type-line-body);
+  letter-spacing: var(--type-track-body);
 }
 
 .contact-panel {
@@ -892,7 +911,8 @@ h4,
   color: rgba(255, 255, 255, 0.72);
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 1.6px;
+  line-height: 1.45;
+  letter-spacing: var(--type-track-label);
   margin-bottom: 4px;
 }
 
@@ -901,7 +921,8 @@ h4,
   color: #fff;
   font-size: clamp(17px, 2vw, 20px);
   font-weight: 500;
-  line-height: 1.6;
+  line-height: var(--type-line-body);
+  letter-spacing: var(--type-track-body);
 }
 
 .contact-item p {
@@ -972,7 +993,8 @@ footer p {
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 1.6px;
+  line-height: 1.45;
+  letter-spacing: var(--type-track-label);
   margin-top: 8px;
 }
 
@@ -1070,6 +1092,10 @@ footer a:hover {
 }
 
 @media (max-width: 767px) {
+  body {
+    font-size: 13px;
+  }
+
   .container,
   .container-fluid {
     padding-left: 16px;
@@ -1085,7 +1111,7 @@ footer a:hover {
   }
 
   .section-head h4 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .hero,
@@ -1114,11 +1140,11 @@ footer a:hover {
   }
 
   .service-card h4 {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .service-card p {
-    font-size: 17px;
+    font-size: 16px;
   }
 
     .services-grid {
@@ -1141,6 +1167,7 @@ footer a:hover {
   .btn-site {
     width: min(100%, 320px);
     justify-content: center;
+    font-size: 12px;
   }
   
 
@@ -1176,15 +1203,25 @@ footer a:hover {
   }
 
   .contact-item h6 {
-    font-size: 11px;
-    letter-spacing: 1.4px;
+    font-size: 10px;
     margin-bottom: 6px;
   }
 
   .contact-item p,
   .contact-item a {
-    font-size: 17px;
-    line-height: 1.55;
+    font-size: 16px;
+  }
+
+  .diff-item h6 {
+    font-size: 14px;
+  }
+
+  .number-item p {
+    font-size: 11px;
+  }
+
+  footer p {
+    font-size: 11px;
   }
 
   .nav-logo img {
@@ -1234,6 +1271,6 @@ footer a:hover {
 
   .contact-item p,
   .contact-item a {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
