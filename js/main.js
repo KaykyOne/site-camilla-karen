@@ -201,27 +201,36 @@ document.addEventListener("DOMContentLoaded", () => {
     autoPlay = setInterval(() => goToSlide(currentSlide + 1), 5000);
   }
 
-  testimonialItems.forEach((_, index) => {
-    const dot = document.createElement("div");
-    dot.className = `t-dot${index === 0 ? " active" : ""}`;
-    dot.addEventListener("click", () => {
-      goToSlide(index);
-      resetAutoPlay();
+  if (track && dotsEl && testimonialItems.length) {
+    const prevButton = document.querySelector(".t-prev");
+    const nextButton = document.querySelector(".t-next");
+
+    testimonialItems.forEach((_, index) => {
+      const dot = document.createElement("div");
+      dot.className = `t-dot${index === 0 ? " active" : ""}`;
+      dot.addEventListener("click", () => {
+        goToSlide(index);
+        resetAutoPlay();
+      });
+      dotsEl.appendChild(dot);
     });
-    dotsEl.appendChild(dot);
-  });
 
-  document.querySelector(".t-prev").addEventListener("click", () => {
-    goToSlide(currentSlide - 1);
-    resetAutoPlay();
-  });
+    if (prevButton) {
+      prevButton.addEventListener("click", () => {
+        goToSlide(currentSlide - 1);
+        resetAutoPlay();
+      });
+    }
 
-  document.querySelector(".t-next").addEventListener("click", () => {
-    goToSlide(currentSlide + 1);
-    resetAutoPlay();
-  });
+    if (nextButton) {
+      nextButton.addEventListener("click", () => {
+        goToSlide(currentSlide + 1);
+        resetAutoPlay();
+      });
+    }
 
-  autoPlay = setInterval(() => goToSlide(currentSlide + 1), 5000);
+    autoPlay = setInterval(() => goToSlide(currentSlide + 1), 5000);
+  }
 
   setNavbarState();
   updateActiveLink();
