@@ -1,0 +1,95 @@
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  min-height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  --nav-link-color: #fff;
+  --nav-link-hover: var(--primary-light);
+  --nav-toggle-color: #fff;
+  transition: background-color 0.45s ease, box-shadow 0.45s ease, border-color 0.45s ease, backdrop-filter 0.45s ease;
+  z-index: 100;
+}
+
+#navbar.scrolled,
+#navbar.menu-open {
+  background-color: rgba(255, 249, 240, 0.96);
+  border-color: rgba(126, 85, 38, 0.14);
+  box-shadow: 0 8px 28px rgba(95, 61, 23, 0.08);
+  backdrop-filter: blur(12px);
+  --nav-link-color: var(--text);
+  --nav-link-hover: var(--primary);
+  --nav-toggle-color: var(--primary);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-logo {
+  flex-shrink: 0;
+}
+
+.nav-logo img {
+  width: 150px;
+  border-radius: 18px;
+}
+
+#nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-link {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--nav-link-color);
+  letter-spacing: var(--type-track-label);
+  padding: 8px 12px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--nav-link-hover);
+}
+
+.nav-cta {
+  margin-left: 10px;
+}
+
+#nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+#nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: var(--nav-toggle-color);
+  transition: all 0.3s;
+}
+
+#navbar.scrolled #nav-toggle span,
+#navbar.menu-open #nav-toggle span {
+  background: var(--nav-toggle-color);
+}

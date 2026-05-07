@@ -1,0 +1,35 @@
+footer {
+  background: rgba(0, 0, 0, 0.919);
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(126, 85, 38, 0.12);
+}
+
+.footer-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  width: 100px;
+  margin: 0 auto 20px;
+  border-radius: 18px;
+}
+
+footer p {
+  color: var(--text-light);
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.45;
+  letter-spacing: var(--type-track-label);
+  margin-top: 8px;
+}
+
+footer a {
+  color: var(--primary);
+}
+
+footer a:hover {
+  color: var(--primary-light);
+}

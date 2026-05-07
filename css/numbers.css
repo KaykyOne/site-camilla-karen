@@ -1,0 +1,39 @@
+.numbers-section {
+  padding: 100px 0;
+  background-attachment: fixed;
+}
+
+.numbers-section::before {
+  background: var(--overlay-dark-bg);
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.number-item img {
+  width: 60px;
+  margin: 0 auto 20px;
+  filter: brightness(0) invert(1);
+}
+
+.number-item h3 {
+  font-size: 60px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.number-item p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.45;
+  letter-spacing: var(--type-track-label);
+  text-transform: none;
+  margin-top: 8px;
+}

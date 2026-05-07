@@ -1,0 +1,82 @@
+.contact-panel {
+  padding: 80px 5%;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.contact-panel::before {
+  background: var(--overlay-dark-bg);
+}
+
+.contact-info {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 560px);
+  display: grid;
+  gap: 35px;
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
+}
+
+.contact-icon {
+  width: 36px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-copy {
+  min-width: 0;
+}
+
+.contact-icon img {
+  filter: brightness(0) invert(1);
+}
+
+.contact-item h6 {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: var(--type-track-label);
+  margin-bottom: 4px;
+}
+
+.contact-item p,
+.contact-item a,
+.contact-link {
+  color: #fff;
+  font-size: clamp(17px, 2vw, 20px);
+  font-weight: 500;
+  line-height: var(--type-line-body);
+  letter-spacing: var(--type-track-body);
+}
+
+.contact-item p {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.contact-item a,
+.contact-link {
+  display: inline;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.contact-item a:hover,
+.contact-link:hover {
+  color: var(--primary-light);
+}
+
+.contact-side-img {
+  min-height: 500px;
+}

@@ -1,0 +1,29 @@
+.diff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.diff-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.diff-border {
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+.diff-icon {
+  width: 64px;
+  margin: 0 auto 20px;
+}
+
+.diff-item h6 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+  line-height: var(--type-line-body);
+  letter-spacing: var(--type-track-body);
+}

@@ -1,0 +1,18 @@
+.split-img {
+  min-height: 400px;
+  background-position: 70% center;
+}
+
+.split-content {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid rgba(126, 85, 38, 0.08);
+}
+
+.split-box {
+  padding: 80px 10%;
+}
+
+.split-box p + p {
+  margin-top: 22px;
+}
