@@ -27,6 +27,7 @@ footer p {
 }
 
 footer a {
+  margin-top: 8px;
   color: var(--primary);
 }
 
